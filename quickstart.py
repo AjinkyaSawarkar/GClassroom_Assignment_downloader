@@ -58,7 +58,7 @@ def main():
   try:
     service = build("classroom", "v1", credentials=creds)
 
-    courseid = "733445218873" #input("Enter The course ID: ")
+    courseid = input("Enter The course ID: ")
     print("Course ID: " + courseid)
     results2 = service.courses().courseWork().list(courseId=courseid).execute() #service.courses().coursework().list().execute()
     courses2 = results2.get("courseWork", [])
